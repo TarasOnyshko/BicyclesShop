@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Bike shop</h3>
+    <table class="tablecontent">
+        <tr>
+            <td><p>Модель</p></td>
+            <td><p>Ціна(USD)</p></td>
+            <td><p>Вага</p></td>
+            <td><p>Швидкість</p></td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.Bikes)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p>@b.Weight</p></td>
+                <td><p>@b.Speed</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Купити;</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
