@@ -34,14 +34,16 @@ namespace Bikes_MS_.Controllers
             return View();
         }
         [HttpPost]
-        public string Buy(Purchase purchase)
+        public JavaScriptResult Buy(Purchase purchase)
         {
+            var mess = $@"alert('Пане(і) " + purchase.Person + ", дякуємо за покупку!');";
             purchase.data = DateTime.Now;
 
             db.Purchases.Add(purchase);
 
             db.SaveChanges();
-            return "Пане(і) " + purchase.Person + ", дякуємо за покупку!";
+            return JavaScript(mess);
+            //return "Пане(і) " + purchase.Person + ", дякуємо за покупку!";
         }
 
 

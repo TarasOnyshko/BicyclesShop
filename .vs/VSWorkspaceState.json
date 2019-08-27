@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bikes(MS)"
+    "\\Bikes(MS)",
+    "\\Bikes(MS)\\Content"
   ],
+  "SelectedNode": "\\Bikes(MS)\\Content\\Site.css",
   "PreviewInSolutionExplorer": false
 }
